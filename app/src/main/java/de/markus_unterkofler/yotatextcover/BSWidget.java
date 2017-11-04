@@ -31,8 +31,7 @@ import android.graphics.Bitmap;
 import android.util.Log;
 import android.widget.RemoteViews;
 
-import com.yotadevices.sdk.Drawer;
-import com.yotadevices.sdk.utils.EinkUtils;
+import com.yotadevices.sdk.Epd;
 
 /**
  * Actual back screen (cover) widget
@@ -66,7 +65,7 @@ public class BSWidget extends AppWidgetProvider {
             views = new RemoteViews(context.getPackageName(), R.layout.bs_widget);
 
             //set waveform and dithering - maybe useless?
-            EinkUtils.setRemoteViewsWaveformAndDithering(views, R.layout.bs_widget, Drawer.Waveform.WAVEFORM_GC_FULL, Drawer.Dithering.DITHER_DEFAULT);
+            Epd.fullUpdate(views, R.layout.bs_widget);
 
             //get preferences
             String bigText = Utilities.getPrefsString(Utilities.prefPrefixText + widgetId, context.getString(R.string.text_default));

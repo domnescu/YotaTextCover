@@ -37,8 +37,7 @@ import android.widget.RemoteViews;
 import android.widget.Spinner;
 import android.widget.TextView;
 
-import com.yotadevices.sdk.Drawer;
-import com.yotadevices.sdk.utils.EinkUtils;
+import com.yotadevices.sdk.Epd;
 
 /**
  * Widget settings (YotaHub)
@@ -129,8 +128,7 @@ public class SettingsActivity extends Activity {
                 AppWidgetManager appWidgetManager = AppWidgetManager.getInstance(getApplicationContext());
 
                 //set waveform and dithering - useless?
-                EinkUtils.setRemoteViewsWaveformAndDithering(v, 0, Drawer.Waveform.WAVEFORM_GC_FULL, Drawer.Dithering.DITHER_DEFAULT);
-
+                Epd.fullUpdate(v, R.layout.bs_widget);
                 try {
                     //reset error message
                     errorMessage.setText("");

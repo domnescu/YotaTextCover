@@ -16,7 +16,7 @@
 
         <!-- Adding YotaPhone SDK library -->
         <uses-library
-            android:name="com.yotadevices.yotaphone2.sdk.v2"
+            android:name="com.yotadevices.sdk"
             android:required="true" />
 
         <!-- App Widget that can work on back screen -->
@@ -36,7 +36,7 @@
 
             <!-- Back screen widget settings -->
             <meta-data
-                android:name="com.yotadevices.yotaphone.bs_provider"
+                android:name="com.yotadevices.epd_provider"
                 android:resource="@xml/bs_widget_info" />
         </receiver>
 
