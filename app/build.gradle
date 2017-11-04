@@ -41,5 +41,9 @@ android {
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    // YotaPhone SDK
+    //noinspection GradleDynamicVersion
+    provided 'com.yotadevices.libs.public:sdk:3.7.+'
+
 }
